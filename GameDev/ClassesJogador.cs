@@ -8,25 +8,63 @@ namespace GameDev
 {
     class ClassesJogador
     {
-        public static void classesDePersonagem(string nameUser, int seresMisticos) 
+        public static string classeDoPersonagem(string nameUser, int seresMisticos)
         {
+            string classeEscolhida = string.Empty;
             switch (seresMisticos)
             {
                 case 1:
-                    Console.WriteLine("Você escolheu a classe Guerreiro");
-                    int vida1 = 100;
-                    int ataque1 = 10;
-                    int mana1 = 20;
-                    Console.WriteLine($"Seus atributos iniciais são:\nVida: {vida1}\nAtaque: {ataque1}\nMana: {mana1}");
+                    classeEscolhida = "Guerreiro";
                     break;
                 case 2:
-                    Console.WriteLine("Você escolheu a classe Mago");
-                    int vida2 = 70;
-                    int ataque2 = 12;
-                    int mana2 = 50;
-                    Console.WriteLine($"Seus atributos iniciais são:\nVida: {vida2}\nAtaque: {ataque2}\nMana: {mana2}");
+                    classeEscolhida = "Mago";
                     break;
             }
+            return classeEscolhida;
+        }
+        public static int vidaDoPersonagem(int seresMisticos)
+        {
+            int vida = 0;
+            switch (seresMisticos)
+            {
+                case 1:
+                    vida = 100;
+                    break;
+                case 2:
+                    vida = 70;
+                    break;
             }
+            return vida;
+        }
+        public static int ataqueDoPersonagem(int seresMisticos)
+        {
+            int ataque = 0;
+
+            switch (seresMisticos)
+            {
+                case 1:
+                    ataque = 30;
+                    break;
+                case 2:
+                    ataque = 20;
+                    break;
+            }
+            return ataque;
+        }
+        public static int manaDoPersonagem(int seresMisticos)
+        {
+            int mana = 0;
+
+            switch (seresMisticos)
+            {
+                case 1:
+                    mana = 20;
+                    break;
+                case 2:
+                    mana = 50;
+                    break;
+            }
+            return mana;
+        }
     }
 }
