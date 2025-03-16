@@ -8,63 +8,69 @@ namespace GameDev
 {
     class ClassesJogador
     {
+        public class Personagem
+        {
+            public string nome;
+            public string classe;
+            public int vida;
+            public int ataque;
+            public int mana;
+        }
         public static string classeDoPersonagem(string nameUser, int seresMisticos)
         {
-            string classeEscolhida = string.Empty;
+            Personagem classePersonagem = new Personagem();
             switch (seresMisticos)
             {
                 case 1:
-                    classeEscolhida = "Guerreiro";
+                    classePersonagem.classe = "Guerreiro";
                     break;
                 case 2:
-                    classeEscolhida = "Mago";
+                    classePersonagem.classe = "Mago";
                     break;
             }
-            return classeEscolhida;
+            return classePersonagem.classe;
         }
         public static int vidaDoPersonagem(int seresMisticos)
         {
-            int vida = 0;
+            Personagem vidaDoPersonagem = new Personagem();
             switch (seresMisticos)
             {
                 case 1:
-                    vida = 100;
+                    vidaDoPersonagem.vida = 100;
                     break;
                 case 2:
-                    vida = 70;
+                    vidaDoPersonagem.vida = 70;
                     break;
             }
-            return vida;
+            return vidaDoPersonagem.vida;
         }
         public static int ataqueDoPersonagem(int seresMisticos)
         {
-            int ataque = 0;
-
+            Personagem ataqueDoPersonagem = new Personagem();
             switch (seresMisticos)
             {
                 case 1:
-                    ataque = 30;
+                    ataqueDoPersonagem.ataque = 30;
                     break;
                 case 2:
-                    ataque = 20;
+                    ataqueDoPersonagem.ataque = 20;
                     break;
             }
-            return ataque;
+            return ataqueDoPersonagem.ataque;
         }
         public static int manaDoPersonagem(int seresMisticos)
         {
-            int mana = 0;
-
+            Personagem manaDoPersonagem = new Personagem();
             switch (seresMisticos)
             {
                 case 1:
-                    mana = 20;
+                    manaDoPersonagem.mana = 20;
                     break;
                 case 2:
-                    mana = 50;
+                    manaDoPersonagem.mana = 50;
                     break;
             }
-            return mana;
+            return manaDoPersonagem.mana;
         }
     }
 }
