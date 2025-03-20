@@ -29,8 +29,9 @@ Console.WriteLine($"Você encontrou um {nomeDoMonstro}\nDeseja atacá-lo ou corr
 int segundaDecisao = int.Parse(Console.ReadLine());
 
 //função de batalha aqui
+Batalha.BatalhaFunction(nomeDoMonstro,vidaDoPersonagem, ataqueDoPersonagem, manaDoPersonagem, vidaDoMonstro, ataqueDoMonstro);
 
-
+Console.WriteLine("Final do código");
 
 
 
